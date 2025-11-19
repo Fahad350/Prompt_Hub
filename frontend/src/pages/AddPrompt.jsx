@@ -35,7 +35,7 @@ function AddPrompt() {
   return (
     <>
       <div className="min-h-screen bg-gray-100 flex justify-center items-center text-white">
-        <div className=" md:pt-15 sm:pt-10 bg-gray-900 md:p-10 w-100 h-100 rounded-2xl">
+        <div className=" md:pt-15 sm:pt-10 bg-gray-900 p-10 max-w-100 max-h-100 rounded-2xl">
           <h1 className="text-2xl text-center mb-5">Add New Prompts</h1>
 
           <form onSubmit={handleForm}>
@@ -60,14 +60,17 @@ function AddPrompt() {
             </div>
             <div>
               <button
-                className="bg-black text-white cursor-pointer rounded-2xl w-full h-10"
+                className="bg-black text-white cursor-pointer hover:scale-110 duration-300 rounded-2xl w-full h-10 "
                 type="submit"
               >
                 Add Prompt
               </button>
-              <button className="bg-gray-800 text-white cursor-pointer mt-3 rounded-2xl w-full h-10">
-                <Link to={"/"}>Back Home</Link>
-              </button>
+              <Link to={"/"}>
+                <button className="bg-gray-800 text-white cursor-pointer hover:scale-110 duration-300 mt-3 rounded-2xl w-full h-10">
+                  {" "}
+                  Back Home
+                </button>
+              </Link>
             </div>
           </form>
         </div>

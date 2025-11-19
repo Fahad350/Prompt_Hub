@@ -64,8 +64,8 @@ function PromptList({ searchTerm = "" }) {
             className="flex justify-center cursor-pointer hover:scale-105 duration-300"
             onClick={() => navigate(`/prompt/${item._id}`)} // navigate to detail page
           >
-            <div className="md:px-5 md:py-2 w-full max-w-xl">
-              <div className="border-2 border-gray-200 p-4 w-full rounded-2xl">
+            <div className="md:px-5 md:py-2 w-full max-w-3xl">
+              <div className="border-2 border-gray-200 bg-white p-4 w-full rounded-2xl">
                 <h2 className="text-xl font-bold">{item.title}</h2>
                 <p>{item.content.slice(0, 100)}...</p> {/* snippet */}
               </div>
@@ -78,7 +78,7 @@ function PromptList({ searchTerm = "" }) {
         <div className="text-center mt-4">
           <button
             onClick={loadMore}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="px-4 py-2 bg-blue-500 text-white rounded mb-4 hover:bg-blue-600"
             disabled={loadingMore}
           >
             {loadingMore ? "Loading..." : "Load More"}

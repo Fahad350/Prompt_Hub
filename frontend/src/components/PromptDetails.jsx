@@ -44,22 +44,24 @@ function PromptDetails() {
 
   return (
     <div className="max-w-xl mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-2">{prompt.title}</h2>
-      <p className="mb-4">{prompt.content}</p>
+      <div className="bg-gray-400 min-w-60 min-h-40 rounded-2xl p-4">
+        <h2 className="text-2xl font-bold mb-2">{prompt.title}</h2>
+        <p className="mb-4">{prompt.content}</p>
 
-      <div className="flex gap-4">
-        <button
-          onClick={() => navigate(`/prompt/update/${id}`)}
-          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-        >
-          Update
-        </button>
-        <button
-          onClick={handleDelete}
-          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-        >
-          Delete
-        </button>
+        <div className="flex justify-center gap-4">
+          <button
+            onClick={() => navigate(`/prompt/update/${id}`)}
+            className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+          >
+            Update
+          </button>
+          <button
+            onClick={handleDelete}
+            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+          >
+            Delete
+          </button>
+        </div>
       </div>
     </div>
   );

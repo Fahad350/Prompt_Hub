@@ -7,8 +7,8 @@ function PromptCard() {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <div className="min-h-screen bg-cyan-100 flex justify-center px-4 py-8">
-      <div className="w-full max-w-4xl bg-white rounded-2xl p-4">
+    <div className="min-h-screen bg-white flex justify-center px-4 py-8">
+      <div className="w-full max-w-4xl bg-gray-200 rounded-2xl ">
         <AddBtn />
         <SearchBox searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <PromptList searchTerm={searchTerm} />

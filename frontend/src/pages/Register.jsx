@@ -29,15 +29,16 @@ function Register() {
       );
     }
   };
+
   return (
     <>
-      <div className="min-h-screen bg-cyan-100 flex justify-center items-center text-white">
-        <div className="  md:pt-15 sm:pt-10 bg-gray-900 md:p-10 w-110 h-130 rounded-2xl">
+      <div className="min-h-screen bg-slate-300 flex justify-center items-center text-white p-4">
+        <div className="bg-gray-900 p-6 sm:p-10 w-full max-w-md rounded-2xl">
           <form onSubmit={handleForm}>
-            <h1 className="text-2xl font-bold text-center ">Register </h1>
+            <h1 className="text-2xl font-bold text-center">Register</h1>
+
             <div>
               <label className="text-xl font-semibold">Name</label>
-              <br />
               <input
                 className="h-12 w-full mt-2 bg-gray-700 p-2 mb-3 rounded-lg"
                 type="text"
@@ -49,7 +50,6 @@ function Register() {
 
             <div>
               <label className="text-xl font-semibold">Email</label>
-              <br />
               <input
                 className="h-12 w-full mt-2 bg-gray-700 p-2 mb-3 rounded-lg"
                 type="email"
@@ -61,7 +61,6 @@ function Register() {
 
             <div>
               <label className="text-xl font-semibold">Password</label>
-              <br />
               <input
                 className="h-12 w-full mt-2 bg-gray-700 p-2 mb-3 rounded-lg"
                 type="password"
@@ -71,22 +70,20 @@ function Register() {
               />
             </div>
 
-            <div className="flex justify-between mt-3">
-              <p className="text-red-400">if already have account?</p>
+            <div className="flex flex-col sm:flex-row sm:justify-between text-center sm:text-left mt-3 gap-2">
+              <p className="text-red-400">If already have account?</p>
 
-              <button className="text-cyan-300 cursor-pointer">
-                <Link to={"/login"}>Login</Link>
-              </button>
+              <Link to={"/login"} className="text-cyan-300 cursor-pointer">
+                Login
+              </Link>
             </div>
 
-            <div>
-              <button
-                type="submit"
-                className="h-12 w-full bg-black text-white mt-6 rounded-xl cursor-pointer hover:scale-110 duration-300"
-              >
-                Register
-              </button>
-            </div>
+            <button
+              type="submit"
+              className="h-12 w-full bg-black text-white mt-6 rounded-xl cursor-pointer hover:scale-110 duration-300"
+            >
+              Register
+            </button>
           </form>
         </div>
       </div>
