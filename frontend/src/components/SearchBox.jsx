@@ -10,7 +10,7 @@ function SearchBox({ searchTerm, setSearchTerm }) {
           placeholder="Search "
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-3/4 h-10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-gray-200"
+          className="w-3/4 h-10 px-5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-gray-200"
         />
       </div>
     </div>

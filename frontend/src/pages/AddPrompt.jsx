@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "../../Api/axios";
+import { Link } from "react-router-dom";
 
 function AddPrompt() {
   const [title, setTitle] = useState("");
@@ -34,7 +35,7 @@ function AddPrompt() {
   return (
     <>
       <div className="min-h-screen bg-gray-100 flex justify-center items-center text-white">
-        <div className=" md:pt-15 sm:pt-10 bg-gray-900 md:p-10 w-100 h-90 rounded-2xl">
+        <div className=" md:pt-15 sm:pt-10 bg-gray-900 md:p-10 w-100 h-100 rounded-2xl">
           <h1 className="text-2xl text-center mb-5">Add New Prompts</h1>
 
           <form onSubmit={handleForm}>
@@ -63,6 +64,9 @@ function AddPrompt() {
                 type="submit"
               >
                 Add Prompt
+              </button>
+              <button className="bg-gray-800 text-white cursor-pointer mt-3 rounded-2xl w-full h-10">
+                <Link to={"/"}>Back Home</Link>
               </button>
             </div>
           </form>

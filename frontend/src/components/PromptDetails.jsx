@@ -25,11 +25,11 @@ function PromptDetails() {
   const handleDelete = async () => {
     if (!window.confirm("Are you sure you want to delete this prompt?")) return;
     try {
-      await axios.delete(`/prompt/${id}`, {
+      await axios.delete(`/prompt/delete/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       toast.success("Prompt deleted successfully");
-      navigate("/prompts"); // go back to list
+      navigate("/");
     } catch (error) {
       toast.error(error.response?.data?.message || "Delete failed");
     }

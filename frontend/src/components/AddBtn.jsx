@@ -18,7 +18,7 @@ function AddBtn() {
         </button>
         <button
           onClick={handleLogout}
-          className="text-xl bg-gray-800 px-4 py-2 ml-4 cursor-pointer hover:bg-black hover:scale-110 duration-300"
+          className="text-xl bg-gray-800 px-4 py-2 ml-4 cursor-pointer  hover:bg-black hover:scale-110 duration-300"
         >
           Logout
         </button>

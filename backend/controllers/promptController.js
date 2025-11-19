@@ -77,18 +77,25 @@ export const handleAllPrompts = async (req, res) => {
 };
 
 // get single prompt
-
 export const handleSignlePrompt = async (req, res) => {
   try {
-    const { promptId } = req.params;
-    const singlePrompt = await Prompt.findOne(promptId);
+    const { id } = req.params; // FIX 1: correct param name
+
+    const singlePrompt = await Prompt.findById(id); // FIX 2: correct query
+
+    if (!singlePrompt) {
+      return res.status(404).json({
+        message: "Prompt not found",
+      });
+    }
+
     return res.status(200).json({
       message: "Fetch Single Prompt Successfully!",
-      singlePrompt,
+      prompt: singlePrompt, // FIX 3: return prompt
     });
   } catch (error) {
     return res.status(500).json({
-      message: "error fetching prompt",
+      message: "Error fetching prompt",
       error: error.message,
     });
   }

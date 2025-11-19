@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import { ToastContainer } from "react-toastify";
 import PromptList from "./components/PromptList";
 import PromptDetait from "./components/PromptDetails";
+import AddPrompt from "./pages/AddPrompt";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
           <Route path="/prompts" element={<PromptList />} />
           <Route path="/prompt/:id" element={<PromptDetait />} />
+          <Route path="/add" element={<AddPrompt />} />
         </Routes>
         <ToastContainer position="top-center" autoClose={2000} />
       </BrowserRouter>
