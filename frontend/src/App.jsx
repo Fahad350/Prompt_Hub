@@ -6,17 +6,22 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import { ToastContainer } from "react-toastify";
-import AddPrompt from "./pages/AddPrompt";
+import PromptList from "./components/PromptList";
+import PromptDetait from "./components/PromptDetails";
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/add" element={<AddPrompt />} />
+
+          <Route path="/prompts" element={<PromptList />} />
+          <Route path="/prompt/:id" element={<PromptDetait />} />
         </Routes>
         <ToastContainer position="top-center" autoClose={2000} />
       </BrowserRouter>

@@ -36,7 +36,7 @@ function Login() {
               <label className="text-xl font-semibold">Email</label>
               <br />
               <input
-                className="h-10 w-full mt-2 bg-gray-700 p-2 mb-3 rounded-lg"
+                className="h-12 w-full mt-2 bg-gray-700 p-2 mb-3 rounded-lg"
                 type="email"
                 placeholder="Enter Your Email"
                 value={email}
@@ -48,7 +48,7 @@ function Login() {
               <label className="text-xl font-semibold mt-6">Password</label>
               <br />
               <input
-                className="h-10 w-full mt-2 bg-gray-700 p-2 mb-3 rounded-lg"
+                className="h-12 w-full mt-2 bg-gray-700 p-2 mb-3 rounded-lg"
                 type="password"
                 placeholder="Enter Your Password"
                 value={password}
