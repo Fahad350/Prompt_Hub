@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function OpenAIForm() {
+  const navigate = useNavigate();
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
@@ -45,10 +47,17 @@ function OpenAIForm() {
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-blue-500 text-white px-4 py-2 rounded-xl cursor-pointer hover:scale-105 duration-300"
           disabled={loading}
         >
-          {loading ? "Thinking..." : "Send"}
+          {loading ? "Thinking..." : "Try Prompt"}
+        </button>
+        <button
+          onClick={() => navigate("/")}
+          className="bg-gray-700 text-white px-4 py-2 rounded-xl cursor-pointer hover:scale-105 duration-300"
+          disabled={loading}
+        >
+          {loading ? "Thinking..." : "Back Home"}
         </button>
       </form>
 

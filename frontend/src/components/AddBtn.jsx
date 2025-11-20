@@ -36,7 +36,7 @@ function AddBtn() {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3 items-end">
-        <button className="text-xl bg-gray-800 px-4 py-2 cursor-pointer hover:bg-black hover:scale-110 duration-300">
+        <button className="text-xl bg-gray-800 px-4 py-2 cursor-pointer hover:bg-blue-500 hover:scale-110 duration-300">
           <Link to={"/add"}>Add Prompts</Link>
         </button>
         <button className="text-xl bg-blue-500 px-4 py-2 cursor-pointer hover:bg-black hover:scale-110 duration-300">
@@ -45,7 +45,7 @@ function AddBtn() {
 
         <button
           onClick={handleLogout}
-          className="text-xl bg-gray-800 px-4 py-2 cursor-pointer hover:bg-black hover:scale-110 duration-300"
+          className="text-xl bg-gray-800 px-4 py-2 cursor-pointer hover:bg-blue-500 hover:scale-110 duration-300"
         >
           Logout
         </button>

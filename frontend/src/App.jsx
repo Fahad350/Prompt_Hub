@@ -11,6 +11,7 @@ import PromptDetait from "./components/PromptDetails";
 import AddPrompt from "./pages/AddPrompt";
 import PromptUpdate from "./components/PromptUpdate";
 import OpenAIForm from "./components/OpenAiForm";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -18,16 +19,65 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Home />} />
-
           <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />} />
 
-          <Route path="/prompts" element={<PromptList />} />
-          <Route path="/prompt/:id" element={<PromptDetait />} />
-          <Route path="/add" element={<AddPrompt />} />
-          <Route path="/prompt/update/:id" element={<PromptUpdate />} />
-          <Route path="/openai" element={<OpenAIForm />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/prompts"
+            element={
+              <ProtectedRoute>
+                <PromptList />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/prompt/:id"
+            element={
+              <ProtectedRoute>
+                <PromptDetait />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/add"
+            element={
+              <ProtectedRoute>
+                <AddPrompt />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/prompt/update/:id"
+            element={
+              <ProtectedRoute>
+                <PromptUpdate />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/openai"
+            element={
+              <ProtectedRoute>
+                <OpenAIForm />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
         <ToastContainer position="top-center" autoClose={2000} />
       </BrowserRouter>

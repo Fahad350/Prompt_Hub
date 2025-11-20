@@ -31,16 +31,16 @@ function Login() {
     <>
       <div className="min-h-screen bg-slate-300 flex justify-center items-center text-white p-4">
         <div
-          style={{ backgroundImage: `url(${loginImg})` }}
-          className="bg-cover bg-center bg-gray-900 p-6 sm:p-10 w-full max-w-md rounded-2xl"
+          // style={{ backgroundImage: `url(${loginImg})` }}
+          className="bg-cover bg-center bg-gray-700 p-6 sm:p-10 w-full max-w-md rounded-2xl"
         >
           <form onSubmit={handleForm}>
-            <h1 className="text-2xl font-bold text-center mb-4">Login</h1>
+            <h1 className="text-2xl font-bold text-center mb-4 ">Login</h1>
 
             <div>
               <label className="text-xl font-semibold">Email</label>
               <input
-                className="h-12 w-full mt-2 bg-gray-300 text-purple-700 p-2 mb-3 rounded-lg"
+                className="h-12 w-full mt-2 bg-gray-500 p-2 mb-3 rounded-lg"
                 type="email"
                 placeholder="Enter Your Email"
                 value={email}
@@ -51,7 +51,7 @@ function Login() {
             <div>
               <label className="text-xl font-semibold">Password</label>
               <input
-                className="h-12 w-full mt-2 bg-gray-300 text-purple-700 p-2 mb-3 rounded-lg"
+                className="h-12 w-full mt-2 bg-gray-500  p-2 mb-3 rounded-lg"
                 type="password"
                 placeholder="Enter Your Password"
                 value={password}
@@ -74,7 +74,7 @@ function Login() {
 
             <button
               type="submit"
-              className="h-12 w-full bg-black text-white mt-6 rounded-xl cursor-pointer hover:scale-110 duration-300"
+              className="h-12 w-full bg-blue-500 text-white mt-6 rounded-xl cursor-pointer hover:scale-110 duration-300"
             >
               Login
             </button>

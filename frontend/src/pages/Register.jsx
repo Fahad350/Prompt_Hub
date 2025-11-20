@@ -33,14 +33,16 @@ function Register() {
   return (
     <>
       <div className="min-h-screen bg-slate-300 flex justify-center items-center text-white p-4">
-        <div className="bg-gray-900 p-6 sm:p-10 w-full max-w-md rounded-2xl">
+        <div className="bg-gray-700 p-6 sm:p-10 w-full max-w-md rounded-2xl">
           <form onSubmit={handleForm}>
-            <h1 className="text-2xl font-bold text-center">Register</h1>
+            <div className="bg-gray-700">
+              <h1 className="text-2xl font-bold text-center">Register</h1>
+            </div>
 
             <div>
               <label className="text-xl font-semibold">Name</label>
               <input
-                className="h-12 w-full mt-2 bg-gray-700 p-2 mb-3 rounded-lg"
+                className="h-12 w-full mt-2 bg-gray-500 p-2 mb-3 rounded-lg"
                 type="text"
                 placeholder="Enter Your Name"
                 value={name}
@@ -51,7 +53,7 @@ function Register() {
             <div>
               <label className="text-xl font-semibold">Email</label>
               <input
-                className="h-12 w-full mt-2 bg-gray-700 p-2 mb-3 rounded-lg"
+                className="h-12 w-full mt-2 bg-gray-500 p-2 mb-3 rounded-lg"
                 type="email"
                 placeholder="Enter Your Email"
                 value={email}
@@ -62,7 +64,7 @@ function Register() {
             <div>
               <label className="text-xl font-semibold">Password</label>
               <input
-                className="h-12 w-full mt-2 bg-gray-700 p-2 mb-3 rounded-lg"
+                className="h-12 w-full mt-2 bg-gray-500 p-2 mb-3 rounded-lg"
                 type="password"
                 placeholder="Enter Your Password"
                 value={password}
@@ -71,7 +73,7 @@ function Register() {
             </div>
 
             <div className="flex flex-col sm:flex-row sm:justify-between text-center sm:text-left mt-3 gap-2">
-              <p className="text-red-400">If already have account?</p>
+              <p className="text-red-400">If already have an account?</p>
 
               <Link to={"/login"} className="text-cyan-300 cursor-pointer">
                 Login
@@ -80,7 +82,7 @@ function Register() {
 
             <button
               type="submit"
-              className="h-12 w-full bg-black text-white mt-6 rounded-xl cursor-pointer hover:scale-110 duration-300"
+              className="h-12 w-full bg-blue-500 text-white mt-6 rounded-xl cursor-pointer hover:scale-110 duration-300"
             >
               Register
             </button>

@@ -36,7 +36,7 @@ function AddPrompt() {
   return (
     <>
       <div className="min-h-screen bg-gray-300 flex justify-center items-center text-white p-4">
-        <div className="bg-gray-900 p-6 sm:p-10 w-full max-w-md rounded-2xl">
+        <div className="bg-gray-700 p-6 sm:p-10 w-full max-w-md rounded-2xl">
           <h1 className="text-2xl text-center mb-5">Add New Prompts</h1>
 
           <form onSubmit={handleForm}>
@@ -47,7 +47,7 @@ function AddPrompt() {
                 placeholder="Prompt Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full h-8 bg-gray-700 rounded-xl p-2"
+                className="w-full h-8 bg-gray-500 rounded-xl p-2"
               />
             </div>
 
@@ -57,12 +57,12 @@ function AddPrompt() {
                 placeholder="Prompt Content"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
-                className="w-full h-25 bg-gray-700 rounded-xl p-2"
+                className="w-full h-25 bg-gray-500 rounded-xl p-2"
               />
             </div>
 
             <button
-              className="bg-black text-white cursor-pointer hover:scale-110 duration-300 rounded-2xl w-full h-10"
+              className="bg-blue-500 text-white cursor-pointer hover:scale-110 duration-300 rounded-2xl w-full h-10"
               type="submit"
             >
               Add Prompt
