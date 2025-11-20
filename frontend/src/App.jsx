@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 import PromptList from "./components/PromptList";
 import PromptDetait from "./components/PromptDetails";
 import AddPrompt from "./pages/AddPrompt";
+import PromptUpdate from "./components/PromptUpdate";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/prompts" element={<PromptList />} />
           <Route path="/prompt/:id" element={<PromptDetait />} />
           <Route path="/add" element={<AddPrompt />} />
+          <Route path="//prompt/update/:id" element={<PromptUpdate />} />
         </Routes>
         <ToastContainer position="top-center" autoClose={2000} />
       </BrowserRouter>

@@ -43,7 +43,7 @@ function PromptDetails() {
   if (!prompt) return <p className="text-center">Prompt not found</p>;
 
   return (
-    <div className="max-w-xl mx-auto p-4">
+    <div className="max-w-xl mx-auto p-4 bg-slate-400 ">
       <div className="bg-gray-300 min-w-60 min-h-40 rounded-2xl p-4">
         <h2 className="text-2xl font-bold mb-2">{prompt.title}</h2>
         <p className="mb-4">{prompt.content}</p>

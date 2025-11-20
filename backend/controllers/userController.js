@@ -25,7 +25,7 @@ export const handleResgister = async (req, res) => {
       },
       process.env.JWT_SECRET,
       {
-        expiresIn: "1h",
+        expiresIn: "30d",
       }
     );
 
@@ -33,7 +33,7 @@ export const handleResgister = async (req, res) => {
       httpOnly: true,
       secure: false,
       sameSite: "strict",
-      maxAge: 60 * 60 * 1000,
+      maxAge: 30 * 24 * 60 * 60 * 1000,
     });
     return res.status(201).json({
       message: "user registered successfully!",
@@ -71,7 +71,7 @@ export const handleLogin = async (req, res) => {
       },
       process.env.JWT_SECRET,
       {
-        expiresIn: "1h",
+        expiresIn: "30d",
       }
     );
 
@@ -79,7 +79,7 @@ export const handleLogin = async (req, res) => {
       httpOnly: true,
       secure: true,
       sameSite: "strict",
-      maxAge: 60 * 60 * 1000,
+      maxAge: 30 * 24 * 60 * 60 * 1000,
     });
     return res.status(200).json({
       message: "login successfully!",
