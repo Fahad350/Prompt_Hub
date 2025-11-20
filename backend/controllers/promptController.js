@@ -143,7 +143,7 @@ export const handleUpdatePromptByUser = async (req, res) => {
   }
 };
 
-// delete prompt
+// delete prompt owner only
 export const handleDeletePrompt = async (req, res) => {
   try {
     const { id: promptId } = req.params;

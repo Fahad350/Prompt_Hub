@@ -35,7 +35,7 @@ function AddPrompt() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-100 flex justify-center items-center text-white p-4">
+      <div className="min-h-screen bg-gray-300 flex justify-center items-center text-white p-4">
         <div className="bg-gray-900 p-6 sm:p-10 w-full max-w-md rounded-2xl">
           <h1 className="text-2xl text-center mb-5">Add New Prompts</h1>
 

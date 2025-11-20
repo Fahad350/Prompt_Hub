@@ -30,15 +30,17 @@ function AddBtn() {
     <div className="bg-gray-900 text-2xl text-white p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
       <div>
         <h1 className="text-center sm:text-left">AI Prompt Bookmark Hub</h1>
+        <p className="text-blue-400 text-lg ">
+          Logged In: <span className="font-xl text-gray-300 ">{username}</span>
+        </p>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3 items-end">
-        <p className="text-gray-400 text-sm text-right">
-          By: <span className="font-medium">{username}</span>
-        </p>
-
         <button className="text-xl bg-gray-800 px-4 py-2 cursor-pointer hover:bg-black hover:scale-110 duration-300">
           <Link to={"/add"}>Add Prompts</Link>
+        </button>
+        <button className="text-xl bg-blue-500 px-4 py-2 cursor-pointer hover:bg-black hover:scale-110 duration-300">
+          <Link to={"/openai"}>OpenAi</Link>
         </button>
 
         <button
