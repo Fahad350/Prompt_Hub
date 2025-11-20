@@ -54,7 +54,7 @@ function PromptUpdate() {
     <div className="bg-slate-200 min-h-screen ">
       <br />
       <br />
-      <div className="max-w-xl mx-auto p-5 bg-slate-400  ">
+      <div className="max-w-xl mx-auto p-8 bg-slate-400  rounded-2xl">
         <h2 className="text-2xl font-bold mb-4 text-center">Update Prompt</h2>
         <form onSubmit={handleUpdate} className="flex flex-col gap-4">
           <input

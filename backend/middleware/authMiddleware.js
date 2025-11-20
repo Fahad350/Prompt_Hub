@@ -1,33 +1,32 @@
 import jwt from "jsonwebtoken";
-import User from "../models/userSchema.js"; // make sure you have a User model
+import User from "../models/userSchema.js";
 
 export const protect = async (req, res, next) => {
   let token;
 
-  try {
-    // Check for token in Authorization header
-
-    if (
-      req.headers.authorization &&
-      req.headers.authorization.startsWith("Bearer")
-    ) {
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith("Bearer")
+  ) {
+    try {
       token = req.headers.authorization.split(" ")[1];
 
       // Verify token
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-      // Attach user object to request (you can include other fields if needed)
-      req.user = {
-        _id: decoded.id,
-        email: decoded.email,
-        name: decoded.name,
-      };
+      // Fetch user from DB
+      const user = await User.findById(decoded.id).select("name email"); // only necessary fields
 
+      if (!user) {
+        return res.status(401).json({ message: "User not found" });
+      }
+
+      req.user = user; // attach full user object
       next();
-    } else {
-      return res.status(401).json({ message: "Not authorized, no token" });
+    } catch (error) {
+      return res.status(401).json({ message: "Not authorized, token failed" });
     }
-  } catch (error) {
-    return res.status(401).json({ message: "Not authorized, token failed" });
+  } else {
+    return res.status(401).json({ message: "Not authorized, no token" });
   }
 };

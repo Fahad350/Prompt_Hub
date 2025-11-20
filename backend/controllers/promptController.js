@@ -58,7 +58,8 @@ export const handleAllPrompts = async (req, res) => {
     const prompts = await Prompt.find(query)
       .sort({ createdAt: -1 })
       .skip((page - 1) * limit)
-      .limit(limit);
+      .limit(limit)
+      .populate("user", "name");
 
     return res.status(200).json({
       message: "Prompts fetched successfully!",

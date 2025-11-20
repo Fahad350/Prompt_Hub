@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "../../Api/axios";
 
 function PromptList({ searchTerm = "" }) {
+  const { id } = useParams();
   const [prompts, setPrompts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
@@ -68,6 +69,12 @@ function PromptList({ searchTerm = "" }) {
               <div className="border-2 border-gray-200 bg-white p-4 w-full rounded-2xl">
                 <h2 className="text-xl font-bold">{item.title}</h2>
                 <p>{item.content.slice(0, 100)}...</p> {/* snippet */}
+                <p className="text-gray-600 text-sm mb-2 text-right">
+                  By:{" "}
+                  <span className="font-medium">
+                    {item.user?.name || "Unknown"}
+                  </span>
+                </p>
               </div>
             </div>
           </div>

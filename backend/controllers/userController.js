@@ -93,3 +93,15 @@ export const handleLogin = async (req, res) => {
     });
   }
 };
+
+// user/me
+// Get logged-in user info
+export const handleUserInfo = async (req, res) => {
+  try {
+    return res.status(200).json({ name: req.user.name });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "User fetch error", error: error.message });
+  }
+};
